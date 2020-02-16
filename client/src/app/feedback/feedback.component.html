@@ -1,0 +1,30 @@
+<section class="main">
+  <div class="regform col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+    <h1>Feedback</h1>
+    <form #myForm6="ngForm" (submit)="submitMyForm(myForm6)">
+        <div class="marg form-group">
+            <input *ngIf="!photo_selected" class="form-control" type="text" (focus)="selPhoto()" placeholder="Select Photographer*">
+            <select *ngIf="photo_selected"  class="form-control dropdop" ngModel name="p_name">
+                <option *ngFor="let ss of photographer_list" [ngValue]="ss">{{ss.name}}</option>
+            </select>
+        </div>
+
+        <div class="marg form-group">
+            <input *ngIf="!rating_selected" class="form-control" type="text" (focus)="selRating()" placeholder="Rating*">
+            <select *ngIf="rating_selected"  class="form-control dropdop" ngModel name="ratings">
+                <option *ngFor="let ss of rating" [ngValue]="ss">{{ss}}</option>
+            </select>
+        </div>
+
+        <div class="marg form-group">
+            <div class="error" *ngIf="cFeedback.touched && cFeedback.invalid && cFeedback.errors.required">Field is mandatory</div>
+            <textarea ngModel name="feedback" required #cFeedback="ngModel" class="form-control" style="resize:none;" placeholder="Feedback*" cols="38" rows="3"></textarea>
+        </div>
+
+        <div class="btn-group btngrp row marg">
+            <button [disabled]="myForm6.invalid" class="btn1 btn">Book</button>
+            <button (click)="onCancel()" class="btn2 btn">Cancel</button>
+        </div>
+    </form>
+  </div>
+</section>

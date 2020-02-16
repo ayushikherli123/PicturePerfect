@@ -1,0 +1,154 @@
+
+.main
+{
+    margin-top: 40px;
+    height: auto;
+    background-color: lightgray;
+    text-align: center;
+}
+
+.msgform
+{
+    height: 400px;
+    text-align: center;
+}
+.inp
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: transparent;
+}
+.inp:hover
+{
+    background-color:lightcyan;
+}
+
+::-webkit-input-placeholder 
+{
+    color:darkslategrey;
+}
+
+::-moz-placeholder 
+{
+    color:darkslategrey;
+}
+
+::-o-placeholder 
+{
+    color:darkslategrey;
+}
+
+::-ms-placeholder 
+{
+    color:darkslategrey;
+}
+.contact
+{
+    text-align: center;
+}
+.msgform h1
+{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 40px;
+    color: slategrey;
+    text-shadow: 2px 2px 5px gray;
+}
+.contact h1
+{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 40px;
+    color: slategrey;
+    text-shadow: 2px 2px 5px gray;
+}
+h4{
+    margin-top: 20px;
+}
+p{
+    font-size: 16px;
+}
+/* mobile */
+@media screen and (max-width:768px) 
+{
+    .cdata
+    {
+        display: none;
+    }
+    .cdata2
+    {
+        display: inline-block !important;
+    }
+} 
+.cdata
+{
+    height: 300px;
+    width:300px;
+    border-radius: 150px;
+    margin-left: 12%;
+    margin-right: 12%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: lightslategrey;
+    color: white;
+}
+
+.cdata2
+{
+    height: 350px;
+    margin-left: 10%;
+    margin-right: 10%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: lightslategrey;
+    color: white;
+    display: none;
+}
+
+.cdata:hover
+{
+    background-color:lightcyan;
+    color: slategrey;
+}
+.buttonSend
+{
+    position: relative;
+    top: -45px;
+    background-color:slategrey;
+    height: 60px;
+    width: 150px;
+    color: white;
+    font-size: 20px;
+}
+.buttonSend:hover
+{
+    color: yellow;
+    transform: scale(1.1);
+}
+.detail
+{
+    text-align: center;
+    color: grey;
+}
+.social
+{
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+.soc
+{
+    border: solid lightgray 1px;
+    font-size: 22px;
+    color: slategrey;
+    width: 40px;
+    height:40px;
+    padding: 7px;
+    box-shadow: 2px 2px 5px gray;
+    border-radius: 20px;
+}
+.soc:hover
+{
+    color:whitesmoke;
+    background-color: slategrey;
+}
+.error
+{
+   color:red; 
+}

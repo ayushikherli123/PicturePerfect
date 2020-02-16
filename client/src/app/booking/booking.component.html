@@ -1,0 +1,75 @@
+<section class="main">
+  <div class="regform col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+    <h1>Booking</h1>
+    <form #myForm5="ngForm" (submit)="submitMyForm(myForm5)">
+        <div class="form-group marg">
+            <div class="error" *ngIf="userName.touched && userName.invalid && userName.errors.required">Field is mandatory</div>
+            <div class="error" *ngIf="userName.touched && userName.invalid && userName.errors.pattern">Invalid Name</div>
+            <input required pattern="[a-zA-Z ]+" ngModel #userName="ngModel" name="cust_name" type="text" class="form-control" placeholder="Name*">
+        </div>
+        <div class="marg col-md-6 col-lg-6 col-sm-6 col-xs-6 form-group sec sec1">
+            <div class="error" *ngIf="ccemail.touched && ccemail.invalid && ccemail.errors.required">Field is mandatory</div>
+            <div class="error" *ngIf="ccemail.touched && ccemail.invalid && ccemail.errors.pattern">Invalid Email</div>            
+            <input required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" #ccemail="ngModel" ngModel name="cust_emailid" class="form-control" placeholder="Email*">
+        </div>
+        <div class="marg col-md-6 col-lg-6 col-sm-6 col-xs-6 form-group sec sec2">
+            <div class="error" *ngIf="ccphone.touched && ccphone.invalid && ccphone.errors.required">Field is mandatory</div>
+            <div class="error" *ngIf="ccphone.touched && ccphone.invalid && ccphone.errors.pattern">Invalid Phone No.</div>
+            <input required #ccphone="ngModel" pattern="^[0-9]{10}$" ngModel name="cust_contact" type="text" class="form-control" placeholder="Contact No*">
+        </div>
+        <div class="marg form-group">
+            <div class="error" *ngIf="cadd.touched && cadd.invalid && cadd.errors.required">Field is mandatory</div>
+            <textarea ngModel name="cust_address" required #cadd="ngModel" class="form-control" style="resize:none;" placeholder="Address*" cols="38" rows="2"></textarea>
+        </div>
+        
+        <div class="marg col-md-6 col-lg-6 col-sm-6 col-xs-6 form-group sec sec1">
+            <div class="error" *ngIf="Cpin.touched && Cpin.invalid && Cpin.errors.pattern">Invalid Pincode</div>
+            <div class="error" *ngIf="Cpin.touched && Cpin.invalid && Cpin.errors.required">Field is mandatory</div>
+            <input required pattern="^[0-9]{6}$" #Cpin="ngModel" type="text" ngModel name="pincode" class="form-control" placeholder="Zip Code*">
+         </div>
+
+        <div class="marg col-md-6 col-lg-6 col-sm-6 col-xs-6 form-group sec sec2">
+            <div class="error" *ngIf="Ccity.touched && Ccity.invalid && Ccity.errors.pattern">Invalid City</div>
+            <div class="error" *ngIf="Ccity.touched && Ccity.invalid && Ccity.errors.required">Field is mandatory</div>
+            <input required type="text" pattern="[a-zA-Z ]+" ngModel name="city" #Ccity="ngModel" class="form-control" placeholder="City*">
+        </div>
+        
+        <div class="marg col-md-6 col-lg-6 col-sm-6 col-xs-6 form-group sec sec1">
+            <input *ngIf="!state_selected" (focus)="selState()" type="text" placeholder="State*" class="form-control">
+            <select *ngIf="state_selected" class="form-control dropdop" ngModel name="state">
+                <option *ngFor="let s of states" [ngValue]="s"> {{s}} </option>
+            </select>
+        </div>
+
+        <div class="marg col-md-6 col-lg-6 col-sm-6 col-xs-6 form-group sec sec2">
+            <input *ngIf="!country_selected" (focus)="selCountry()" type="text" placeholder="Country*" class="form-control">
+            <select *ngIf="country_selected"  class="form-control dropdop" ngModel name="country">
+                <option *ngFor="let ss of countries" [ngValue]="ss"> {{ss}} </option>
+            </select>
+        </div>
+        <div class="marg form-group">
+            <input *ngIf="!theme_selected"  type="text" (focus)="selTheme()" class="form-control" placeholder="Select Theme*">
+            <select *ngIf="theme_selected"  class="form-control dropdop" ngModel name="theme">
+                <option *ngFor="let ss of themes" [ngValue]="ss">{{ss.theme_name}} (Rs. {{ss.price}}) </option>
+            </select>
+        </div>
+
+        <div class="marg col-md-6 col-lg-6 col-sm-6 col-xs-6 form-group sec sec1">
+            <div class="error" *ngIf="Cdate.touched && Cdate.invalid && Cdate.errors.required">Field is mandatory</div>
+            <input required #Cdate="ngModel" type="text" onfocus="(this.type='date')" id="date" min={{now}} ngModel name="booking_date" class="form-control" placeholder="Function Date*">
+         </div>
+
+        <div class="marg col-md-6 col-lg-6 col-sm-6 col-xs-6 form-group sec sec2">
+            <input *ngIf="!photo_selected" class="form-control" type="text" (focus)="selPhoto()" placeholder="Select Photographer*">
+            <select *ngIf="photo_selected"  class="form-control dropdop" ngModel name="p_name">
+                <option *ngFor="let ss of photographers" [ngValue]="ss">{{ss.name}}</option>
+            </select>
+        </div>
+
+        <div class="btn-group btngrp row marg">
+            <button [disabled]="myForm5.invalid" class="btn1 btn">Book</button>
+            <button (click)="onCancel()" class="btn2 btn">Cancel</button>
+        </div>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,15 @@
+  <section class="main">  
+  <div class="data">
+    <div>
+      <ul  class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+        <li><a href="#" routerLink="photographer_booking">My Bookings</a></li>
+        <li><a href="#" routerLink="photographer_profile">Profile</a></li>
+        <li><a href="#" routerLink="admin" (click)="logout()">Logout</a></li>
+      </ul>  
+    </div>
+    <div class="msg">Welcome&nbsp;&nbsp;{{name}}</div>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+  </div>
+</section>

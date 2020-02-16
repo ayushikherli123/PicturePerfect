@@ -1,0 +1,60 @@
+<a name="cont"></a>
+<div class="main container-fluid contact">
+    <div class="msgform col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+        <h1>Reach Us</h1>
+
+    <form id="myformm" #myForm="ngForm" (submit)="submitMyForm(myForm)">
+          <div class="form-group">
+              <div class="error" *ngIf="contactName.touched && contactName.invalid && contactName.errors.required">Name is mandatory</div>
+              <div class="error" *ngIf="contactName.touched && contactName.invalid && contactName.errors.pattern">Name must contain only characters</div>
+              <input id="nnm" required pattern="[a-zA-Z ]+" ngModel #contactName="ngModel" name="name" type="text" class="form-control inp" placeholder="Name*">
+          </div>
+          <div class="form-group">
+              <div class="error" *ngIf="cemail.touched && cemail.invalid && cemail.errors.required">Email is mandatory</div>
+              <div class="error" *ngIf="cemail.touched && cemail.invalid && cemail.errors.pattern">Email must be in valid format</div>
+              <input required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" #cemail="ngModel" ngModel name="email" type="email" class="form-control inp" placeholder="Email*">
+          </div>
+          <div class="form-group">
+              <div class="error" *ngIf="cphone.touched && cphone.invalid && cphone.errors.pattern">Mobile must be in valid format</div>
+              <input #cphone="ngModel" pattern="^[0-9]{10}$" ngModel name="phone" type="text" class="form-control inp" placeholder="Mobile*">
+          </div>
+          <div class="form-group">
+              <div class="error" *ngIf="cmessage.touched && cmessage.invalid && cmessage.errors.required">Enter some message</div>
+              <textarea ngModel name="message" required #cmessage="ngModel" class="form-control inp" style="resize:none;" placeholder="Message*" cols="38" rows="5"></textarea>
+          </div>
+          <div class="form-group">
+              <button [disabled]="myForm.invalid" class="buttonSend">Send</button>
+          </div>
+    </form>
+    </div>
+    <div class="contact col-md-5 col-md-offset-2 col-lg-4 col-lg-offset-2 col-sm-9 col-sm-offset-2 col-xs-9 col-xs-offset-2">
+        <h1>Visit Us</h1>
+        <div class="cdata">
+            <br/>
+            <h4>Address</h4>
+            <p>Picture Perfect Studio</p>
+            <p>Near Sunbeam Institute</p>
+            <p>Market yard, Pune, Maharashtra</p>
+            <br/>
+            <p>ceopicturep@gmail.com</p>
+            <p>+919999999999</p>
+        </div>
+        <div class="cdata2 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 col-sm-12 col-xs-12">
+            <br/>
+            <h4>Address</h4>
+            <p>Picture Perfect Studio</p>
+            <p>Near Sunbeam Institute</p>
+            <p>Market yard, Pune, Maharashtra</p>
+            <br/>
+            <p>ceopicturep@gmail.com</p>
+            <p>+919999999999</p>
+        </div>
+    </div>
+    <div class="social col-md-12 col-lg-12 col-sm-12 col-xs-12 row">
+        <a target="_blank" href="https://www.facebook.com/Picture_Perfect-149018919199552/" class="btn social_buttton"><i class="soc fa fa-facebook"></i></a>
+        <a target="_blank" href="https://www.instagram.com/ceopictureperfect/?hl=en" class="btn social_buttton"><i class="soc fa fa-instagram"></i></a>
+        <a target="_blank" href="https://plus.google.com/u/0/109068661594429077327" class="btn social_buttton"><i style="font-size: 19px" class="soc fa fa-google-plus"></i></a>
+        <a target="_blank" href="https://in.pinterest.com/ceopicturep/" class="btn social_buttton"><i class="soc fa fa-pinterest"></i></a>
+        <a target="_blank" href="https://twitter.com/ceopicturep" class="btn social_buttton"><i class="soc fa fa-twitter"></i></a>
+    </div>
+</div>

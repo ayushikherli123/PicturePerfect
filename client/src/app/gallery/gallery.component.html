@@ -1,0 +1,63 @@
+<div class="placeholder container-fluid">
+</div>
+<div class="container-fluid">
+    <span class="span1 place col-md-5 col-lg-5 col-sm-5 col-xs-5">
+        <img class="Hline" src="../../assets/images/gallery/hline.jpg"/>
+    </span>
+    <span class="span2 place col-md-2">
+        <img class="Himag" src="../../assets/images/gallery/hicon.jpg"/>
+    </span>
+    <span class="span3 place col-md-5 col-lg-5 col-sm-5 col-xs-5">
+        <img class="Hline2" src="../../assets/images/gallery/line2.jpg"/>
+    </span>
+</div>
+
+<div class="gallery">
+    <div class="row">
+        <div (click)="lightbox(0)" class="common col-md-3">
+            <p>Featured&nbsp;<span class="glyf glyphicon glyphicon-heart" aria-hidden="true"></span>&nbsp;Gallery</p>
+        </div>
+    </div>
+
+    <!--Slider start-->
+    <div [style.display]="selected==true ? 'block' : 'none'">
+        <div id="ninja-slider">
+            <div class="slider-inner">
+                <ul>
+                    <li *ngFor="let imgg of galleryImages">
+                        <a class="ns-img" href="../../assets/images/gallery/imgs/{{imgg.img}}"></a>
+                        <div class="caption">
+                        </div>
+                    </li>
+                </ul>
+                <div id="fsBtn" class="fs-icon">
+                    <div (click)="CloseSlider()" class="clsbtn glyphicon glyphicon-remove"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="max-width:700px;margin:90px auto;"> 
+    </div>
+    <!--end-->
+    <div class="row">
+        <div *ngFor="let item of themes" class="box col-md-2 col-lg-2 col-sm-4 col-xs-4">
+            <img src="../../assets/images/gallery/thmimg/{{item.theme_img}}"/>
+            <div class="overlay">
+                <!-- <div class="text" (click)="lightbox(0, item.theme_name)">{{item.theme_name}}</div> -->
+                <div class="text" (click)="getImg(item.theme_name)">{{item.theme_name}}</div>
+                <div class="booklink" (click)="book()">Book Now</div>
+            </div>
+        </div>
+    </div>
+    <div [style.display]="selectTheme==true ? 'block' : 'none'" class="mainImageBox">
+        <div class="closeButton" (click)="close()">Close</div>
+        <div *ngFor="let imgg of themeImages"  class="imageBox">
+            <img class="boximg" src="../../assets/images/gallery/imgs/{{imgg.image_name}}"/>
+        </div>
+        <!-- <div class="imageBox">
+        </div>
+        <div class="imageBox">
+        </div> -->
+    </div>
+</div>
+  

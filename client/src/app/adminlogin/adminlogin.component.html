@@ -1,0 +1,25 @@
+<section class="main">
+  <div class="regform row col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+    <br/>
+    <h1>Admin Login</h1>
+    <form #myForm8="ngForm" (submit)="submitMyyForm(myForm8)">
+      <div class="form-group">
+          <div class="error" *ngIf="userEmail.touched && userEmail.invalid && userEmail.errors.pattern">Invalid Email</div>                    
+          <div class="error" *ngIf="userEmail.touched && userEmail.invalid && userEmail.errors.required">Field is mandatory</div>
+          <input required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" type="email" ngModel #userEmail="ngModel" name="email" class="form-control" placeholder="Email*">
+      </div>
+
+      <div class="form-group">
+          <div class="error" *ngIf="userPass.touched && userPass.invalid && userPass.errors.required">Field is mandatory</div>
+          <input required type="password" ngModel #userPass="ngModel" name="password" class="form-control" placeholder="Password*">
+      </div>
+      <div class="btn-group btngrp">
+        <button [disabled]="myForm8.invalid" class="btn1 btn">Login</button>
+        <button (click)="onCancel()" class="btn2 btn">Cancel</button>
+      </div>
+      <div class="forgotpswdLink">
+        <a (click)="forgotPasswordAdmin()">Forget Password</a>
+      </div>
+    </form> 
+  </div>
+</section>

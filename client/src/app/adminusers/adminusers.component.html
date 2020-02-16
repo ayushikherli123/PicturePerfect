@@ -1,0 +1,63 @@
+<div class="col-md-11 col-lg-11 col-xs-11 col-sm-11  heading">
+  <h3>Customer Details</h3>
+  <div class="search input-group col-md-3 col-md-offset-9 col-lg-3 col-lg-offset-9 col-xs-12 col-sm-6 col-sm-offset-6">
+      <input type="text" class="form-control" [(ngModel)]="city" placeholder="Search Customer via City...">
+      <span class="input-group-btn">
+        <button class="btn btn-default searchbtn" type="button" (click)="OnSearch()">Go!</button>
+      </span>
+  </div>
+</div>
+<div *ngIf="!searched"  class="col-md-11 col-lg-11 col-xs-11 col-sm-11 main">
+  <table class="table table-hover table-striped table-responsive-m">
+    <thead>
+      <tr>
+        <th>Customer Id</th>
+        <th>Name</th>
+        <th>Email Id</th>
+        <th>Contact No</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>State</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of customers">
+        <td>{{c.cid}}</td>
+        <td>{{c.name}}</td>
+        <td>{{c.email}}</td>
+        <td>{{c.mobile}}</td>
+        <td>{{c.houseno}}, {{c.locality}}, {{c.pincode}}</td>
+        <td>{{c.city}}</td>
+        <td>{{c.state}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="searched"  class="col-md-11 col-lg-11 col-xs-11 col-sm-11 main">
+  <table class="table table-hover table-striped table-responsive-m">
+    <thead>
+      <tr>
+        <th>Customer Id</th>
+        <th>Name</th>
+        <th>Email Id</th>
+        <th>Contact No</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>State</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of customersbycity">
+        <td>{{c.cid}}</td>
+        <td>{{c.name}}</td>
+        <td>{{c.email}}</td>
+        <td>{{c.mobile}}</td>
+        <td>{{c.houseno}}, {{c.locality}}, {{c.pincode}}</td>
+        <td>{{c.city}}</td>
+        <td>{{c.state}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

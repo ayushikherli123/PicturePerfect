@@ -1,0 +1,28 @@
+.main
+{
+    text-align: center;
+    overflow-y: scroll;
+    height: 400px;
+    color: darkslategray;
+    font-size: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+table
+{
+    text-align: center;
+}
+.heading
+{
+    height: auto;
+    background-color: #374a55;
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+    text-shadow: 10px 0px 20px grey;
+}
+
+th
+{
+    text-align: center;
+}

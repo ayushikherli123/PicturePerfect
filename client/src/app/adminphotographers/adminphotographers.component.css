@@ -1,0 +1,62 @@
+.main
+{
+    text-align: center;
+    overflow-y: scroll;
+    height: 400px;
+    color: darkslategray;
+    font-size: 13px;
+    margin-left: 45px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.search
+{
+    margin-bottom: 10px;
+}
+
+table
+{
+    text-align: center;
+}
+th
+{
+    text-align: center;
+}
+.heading
+{
+    height: auto;
+    background-color: #374a55;
+    color: white;
+    text-align: center;
+    margin-left: 45px;
+    margin-top: 30px;
+    text-shadow: 10px 0px 20px grey;
+}
+.searchbtn
+{
+    color: #374a55;
+    font-weight: bold;
+}
+::-webkit-input-placeholder 
+{
+    color:darkslategray;
+}
+
+::-webkit-placeholder 
+{
+    color:darkslategray;
+}
+
+::-moz-placeholder 
+{
+    color:darkslategray;
+}
+
+::-o-placeholder 
+{
+    color:darkslategray;
+}
+
+::-ms-placeholder 
+{
+    color:darkslategray;
+}

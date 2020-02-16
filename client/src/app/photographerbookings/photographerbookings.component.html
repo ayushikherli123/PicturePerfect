@@ -1,0 +1,29 @@
+<div class="col-md-11 col-lg-11 col-xs-11 col-sm-11  heading"><h3>Bookings</h3></div>
+<div class="col-md-11 col-lg-11 col-xs-11 col-sm-11 main">
+  <table class="table table-hover table-striped table-responsive-m">
+    <thead>
+      <tr>
+        <th>Booking Id</th>
+        <th>Customer Id</th>
+        <th>Customer Name</th>
+        <th>Photographer Name</th>
+        <th>Booking Date</th>
+        <th>Photography Theme</th>
+        <th>Amount</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let b of bookings">
+        <td>{{b.book_id}}</td>
+        <td>{{b.cust_id}}</td>
+        <td>{{b.cust_name}}</td>
+        <td>{{b.p_name}}</td>
+        <td>{{b.booking_date}}</td>
+        <td>{{b.theme}}</td>
+        <td>{{b.service_amount}}</td>
+        <td>{{b.status}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

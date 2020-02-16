@@ -1,0 +1,115 @@
+.main
+{
+    height: 600px;
+    background-color: #374a55;
+}
+.error
+{
+    color: yellowgreen;
+}
+h1
+{
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
+}
+.btngrp
+{
+    margin-left: auto;
+}
+.regform
+{
+    height: 400px;
+    margin-top: 120px;
+    margin-bottom: 50px;
+    color: whitesmoke;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.regform div
+{
+    margin-top: 30px;
+}
+.regform input
+{
+    background-color: #4a6573;
+    border: none;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.btn1
+{
+    width: 250px;
+    font-size: 18px;
+    background-color:lightseagreen;
+    color: #034c54;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.btn1:hover
+{
+   background-color:#0c7210;
+   color:lightgoldenrodyellow;
+   transform: scale(1.1);
+}
+.btn2:hover
+{
+   background-color:teal;
+    color:lightgoldenrodyellow;
+    transform: scale(1.1);
+}
+.btn2
+{
+    width: 145px;
+    font-size: 18px;
+    background-color: #1fe26a;
+    color: #046d37;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.dropdop
+{
+    color:white;
+}
+.regform select
+{
+    background-color: #4a6573;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.forgotpswdLink
+{
+    margin-top: 0px;
+    text-align: right;
+    margin-right: 10px;
+    color:lightblue;
+}
+a
+{
+    text-decoration-line: none;
+}
+a:hover
+{
+    color: yellow;
+    cursor: pointer;
+}
+::-webkit-input-placeholder 
+{
+    color:white;
+}
+
+::-webkit-placeholder 
+{
+    color:white;
+}
+
+::-moz-placeholder 
+{
+    color:white;
+}
+
+::-o-placeholder 
+{
+    color:white;
+}
+
+::-ms-placeholder 
+{
+    color:white;
+}

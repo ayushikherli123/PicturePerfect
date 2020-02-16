@@ -1,0 +1,48 @@
+<div>
+    <!--Imageset1 Start -->
+        <div class="row imgs">
+            <div *ngFor="let imgg of images" class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <a (click)="lightbox(0)"><img class="imgset" src="../../assets/images/homeimg/{{imgg.img}}" alt="image" /></a>
+            </div>
+        </div>
+    <!--end-->
+
+    <!--Slider start-->
+      <div [style.display]="selected==true ? 'block' : 'none'">
+        <div id="ninja-slider">
+            <div class="slider-inner">
+                <ul>
+                    <li *ngFor="let imgg of images3">
+                        <a class="ns-img" href="../../assets/images/homeimg/sliderimages/{{imgg.img}}"></a>
+                        <div class="caption">
+                        </div>
+                    </li>
+                </ul>
+                <div id="fsBtn" class="fs-icon">
+                    <div (click)="CloseSlider()" class="clsbtn glyphicon glyphicon-remove"></div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div style="max-width:700px;margin:90px auto;"> 
+      </div>
+    <!--end-->
+    
+    <!-- Start -->
+        <div class="placehol"></div>
+    <!--end-->    
+    <!--start-->
+        <div class="slide2" style="background-color:transparent" id="thumbnail-slider">
+            <div class="inner col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <ul>
+                    <li *ngFor="let im of images2" >
+                        <img style="padding:0; margin:0;" class="thumb imgs" src="../../assets/images/homeimg/subimg/{{im.img}}" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+    <!--end-->
+    <!-- Start -->
+        <div class="placehol"></div>
+    <!--end-->  
+</div>

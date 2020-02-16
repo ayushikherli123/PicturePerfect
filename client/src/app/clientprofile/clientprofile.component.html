@@ -1,0 +1,19 @@
+<!-- <div class="placeholder"></div> -->
+<section class="main">
+  <div class="namee">Welcome {{name}}</div>
+  <div class="regform row col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+    <div *ngFor="let p of profile" class="data">
+      <h5>Name</h5>
+      <p>{{p.name}}</p>
+      <h5>Email Id</h5>
+      <p>{{p.email}}</p>
+      <h5>Contact No</h5>
+      <p>+91{{p.mobile}}</p>
+      <h5>Address</h5>
+      <p>{{p.houseno}}, {{p.locality}}, {{p.city}}</p>
+      <p>{{p.state}}, {{p.country}}</p>
+      <p>{{p.pincode}}</p>
+      <div class="linkk" (click)="updateRoute()"><a>Update Profile</a></div>
+    </div>
+  </div>
+</section>

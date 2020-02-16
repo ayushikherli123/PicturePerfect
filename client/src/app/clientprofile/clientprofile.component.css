@@ -1,0 +1,66 @@
+.main
+{
+    height: 600px;
+    background-color: #ffec3b;
+}
+
+.regform
+{
+    height: 70%;
+    border-radius: 50%;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    color: whitesmoke;
+    background-color: #374a55;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.regform:hover
+{
+    background-color: #d7006c;
+}
+
+a
+{
+    text-decoration-line: none;
+    color: yellow;
+    font-weight: bold;
+    font-size: 20px;
+}
+.placeholder
+{
+    height: 32px;
+    background-color: #374a55;
+}
+.linkk:hover
+{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.namee
+{
+    float: right;
+    font-weight: bold;
+    color: #374a55;
+    font-size: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.data
+{
+    height: 40%;
+    margin-top: 8%;
+    margin-left: 5%;
+    width: 90%;
+    text-align: center;
+}
+h5
+{
+    font-weight: bold;
+    color: #fdf9af;
+}
+p
+{
+    font-size: 16px;
+}
