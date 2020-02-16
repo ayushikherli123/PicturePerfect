@@ -1,0 +1,139 @@
+<div class=carosal>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="../../assets/images/portfolio/carosal/c1.jpg" alt="Los Angeles" style="width:100%;">
+      </div>
+
+      <div *ngFor="let imgg of carosalImages"  class="item">
+        <img src="../../assets/images/portfolio/carosal/{{imgg.img}}" alt="Chicago" style="width:100%;">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<div class="portfolio">
+  <div class="innerDiv">  
+    <div>
+      <div (click)="lightbox(0)" class="portfolioImg" style="height:180px; width:33%;">
+        <img src="../../assets/images/portfolio/header/1.jpg" alt="Avatar" class="image">
+          <div style="background-color: rgba(250, 0, 25, 0.5)" class="overlayleft">
+            <div class="text">Keshav Samanth</div>
+            <div class="text2" (click)="book()">Book Now</div>
+          </div>
+      </div>
+
+      <div class="portfolioImg" (click)="lightbox(0)" style="height:180px; width:32%;">
+          <img src="../../assets/images/portfolio/header/4.jpg" alt="Avatar" class="image">
+          <div style="background-color: rgba(100, 130, 200, 0.5)" class="overlaydown">
+            <div class="text">Tejaswini Gupta</div>
+            <div class="text2" (click)="book()">Book Now</div>
+          </div>
+      </div>
+
+      <div class="portfolioImg" (click)="lightbox(0)" style="height:180px; width:32%;">
+          <img src="../../assets/images/portfolio/header/7.jpg" alt="Avatar" class="image">
+          <div style="background-color: rgba(200, 180, 0, 0.5)" class="overlayright">
+            <div class="text">Anikesh Jain</div>
+            <div class="text2" (click)="book()">Book Now</div>
+          </div>
+      </div>
+    </div>
+    <div>
+      <div (click)="lightbox(0)" class="portfolioImg" style="height:300px; width:28%;">
+        <img src="../../assets/images/portfolio/header/3.jpg" alt="Avatar" class="image">
+          <div style="background-color: rgba(0, 0, 250, 0.5)" class="overlaydown">
+            <div class="text">Nivedita Joshi</div>
+            <div class="text2" (click)="book()">Book Now</div>
+          </div>
+      </div>
+
+      <div class="portfolioImg" (click)="lightbox(0)" style="height:300px; width:25%;">
+          <img src="../../assets/images/portfolio/header/2.jpg" alt="Avatar" class="image">
+          <div style="background-color: rgba(0, 100, 10, 0.5)" class="overlayright">
+            <div class="text">Anirudhdha Shrivastava</div>
+            <div class="text2" (click)="book()">Book Now</div>
+          </div>
+      </div>
+
+      <div class="portfolioImg" (click)="lightbox(0)" style="height:300px; width:20%;">
+          <img src="../../assets/images/portfolio/header/8.jpg" alt="Avatar" class="image">
+          <div style="background-color: rgba(500, 200, 0, 0.5)" class="overlayup">
+            <div class="text">Keshav Samanth</div>
+            <div class="text2" (click)="book()">Book Now</div>
+          </div>
+      </div>
+      <div class="portfolioImg" (click)="lightbox(0)" style="height:300px; width:23%;">
+          <img src="../../assets/images/portfolio/header/5.jpg" alt="Avatar" class="image">
+          <div style="background-color: rgba(40, 201, 321, 0.5)" class="overlayleft">
+            <div class="text">Tejaswini Gupta</div>
+            <div class="text2" (click)="book()">Book Now</div>
+          </div>
+      </div>
+
+    </div>
+    <div>
+      <div (click)="lightbox(0)" class="portfolioImg" style="height:180px; width:33%;">
+        <img src="../../assets/images/portfolio/header/9.jpg" alt="Avatar" class="image">
+          <div style="background-color: rgba(500, 0, 120, 0.5)" class="overlayup">
+            <div class="text">Anikesh Jain</div>
+            <div class="text2" (click)="book()">Book Now</div>
+          </div>
+      </div>
+
+      <div class="portfolioImg" (click)="lightbox(0)" style="height:180px; width:28%;">
+          <img src="../../assets/images/portfolio/header/6.jpg" alt="Avatar" class="image">
+          <div style="background-color: rgba(31, 31, 31, 0.5)" class="overlayright">
+            <div class="text">Nivedita Joshi</div>
+            <div class="text2" (click)="book()">Book Now</div>
+          </div>
+      </div>
+
+      <div class="portfolioImg" (click)="lightbox(0)" style="height:180px; width:36%;">
+          <img src="../../assets/images/portfolio/header/10.jpg" alt="Avatar" class="image">
+          <div style="background-color: rgba(59, 7, 73, 0.5)" class="overlaydown">
+            <div class="text">Anirudhdha Shrivastava</div>
+            <div class="text2" (click)="book()">Book Now</div>
+          </div>
+      </div>
+    </div>
+    <!--Slider start-->
+      <div [style.display]="selected==true ? 'block' : 'none'">
+          <div id="ninja-slider">
+              <div class="slider-inner">
+                  <ul>
+                      <li *ngFor="let imgg of photos">
+                          <a class="ns-img" href="../../assets/images/portfolio/sliderimages/{{imgg.img}}"></a>
+                          <div class="caption" style="font-size: 30px; font-weight: bold; color: black; float: right">
+                            {{imgg.pname}}
+                          </div>
+                      </li>
+                  </ul>
+                  <div id="fsBtn" class="fs-icon">
+                      <div (click)="CloseSlider()" class="clsbtn glyphicon glyphicon-remove"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div style="max-width:700px;margin:90px auto;"> 
+      </div>
+    <!--end-->
+  </div>
+</div>

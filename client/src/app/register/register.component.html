@@ -1,0 +1,67 @@
+<section class="main">
+  <div class="regform col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+    <br/>
+    <h1>Register</h1>
+    <form #myForm1="ngForm" (submit)="submitMyForm(myForm1)">
+        <div class="form-group marg">
+            <div class="error" *ngIf="userName.touched && userName.invalid && userName.errors.required">Field is mandatory</div>
+            <div class="error" *ngIf="userName.touched && userName.invalid && userName.errors.pattern">Invalid Name</div>
+            <input required pattern="[a-zA-Z ]+" ngModel #userName="ngModel" name="name" type="text" class="form-control" placeholder="Name*">
+        </div>
+        <div class="marg col-md-6 col-lg-6 col-sm-6 col-xs-6 form-group sec sec1">
+            <div class="error" *ngIf="ccemail.touched && ccemail.invalid && ccemail.errors.required">Field is mandatory</div>
+            <div class="error" *ngIf="ccemail.touched && ccemail.invalid && ccemail.errors.pattern">Invalid Email</div>            
+            <input required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" #ccemail="ngModel" ngModel name="email" class="form-control" placeholder="Email*">
+        </div>
+        <div class="marg col-md-6 col-lg-6 col-sm-6 col-xs-6 form-group sec sec2">
+            <div class="error" *ngIf="ccphone.touched && ccphone.invalid && ccphone.errors.pattern">Invalid Phone No.</div>
+            <input #ccphone="ngModel" pattern="^[0-9]{10}$" ngModel name="mobile" type="text" class="form-control" placeholder="Contact No">
+        </div>
+        <div class="marg col-md-6 col-lg-6 col-sm-6 col-xs-6 form-group sec sec1">
+            <div class="error" *ngIf="Cpass.touched && Cpass.invalid && Cpass.errors.required">Field is mandatory</div>
+            <div class="error" *ngIf="Cpass.touched && Cpass.invalid && Cpass.errors.minlength">Minimum 6 Characters</div>
+            <input type="password" required minlength="6" #Cpass="ngModel" ngModel name="password" class="form-control" placeholder="Password*">
+        </div>
+        <div class="marg col-md-6 col-lg-6 col-sm-6 col-xs-6 form-group sec sec2">
+            <div class="error" *ngIf="Ccpass.touched && Ccpass.invalid && Ccpass.errors.required">Field is mandatory</div>
+            <div class="error" *ngIf="Ccpass.touched && Ccpass.invalid && Ccpass.errors.minlength">Minimum 6 Characters</div>
+            <div class="error">{{errText}}</div>
+            <input required minlength="6" #Ccpass="ngModel" type="password" ngModel name="confirm_password" class="form-control" placeholder="Confirm Password*">            
+        </div>
+        <div class="marg col-md-6 col-lg-6 col-sm-6 col-xs-6 form-group sec sec1">
+            <input type="text" ngModel name="houseno" class="form-control" placeholder="House No">
+        </div>
+        <div class="marg col-md-6 col-lg-6 col-sm-6 col-xs-6 form-group sec sec2">
+            <input type="text" ngModel name="locality" class="form-control" placeholder="Locality">
+        </div>
+        <div class="marg col-md-6 col-lg-6 col-sm-6 col-xs-6 form-group sec sec1">
+            <div class="error" *ngIf="Cpin.touched && Cpin.invalid && Cpin.errors.pattern">Invalid Pincode</div>
+            <input pattern="^[0-9]{6}$" #Cpin="ngModel" type="text" ngModel name="pincode" class="form-control" placeholder="Zip Code">
+         </div>
+
+        <div class="marg col-md-6 col-lg-6 col-sm-6 col-xs-6 form-group sec sec2">
+            <div class="error" *ngIf="Ccity.touched && Ccity.invalid && Ccity.errors.pattern">Invalid City</div>
+            <input type="text" pattern="[a-zA-Z ]+" ngModel name="city" #Ccity="ngModel" class="form-control" placeholder="City">
+        </div>
+
+        <div class="marg col-md-6 col-lg-6 col-sm-6 col-xs-6 form-group sec sec1">
+            <input type="text" *ngIf="!selected" (click)="select()" placeholder="Select a State"  class="form-control" >
+            <select *ngIf="selected"  class="form-control dropdop" ngModel name="state">
+                <option *ngFor="let s of states" [ngValue]="s"> {{s}} </option>
+            </select>
+        </div>
+
+        <div class="marg col-md-6 col-lg-6 col-sm-6 col-xs-6 form-group sec sec2">
+            <input type="text" *ngIf="!selected1" (click)="select1()" placeholder="Select a Country"  class="form-control" >
+            <select *ngIf="selected1" class="form-control dropdop" ngModel name="country">
+                <option *ngFor="let ss of countries" [ngValue]="ss"> {{ss}} </option>
+            </select>
+        </div>
+        
+        <div class="btn-group btngrp row marg">
+            <button [disabled]="myForm1.invalid" class="btn1 btn">Submit</button>
+            <button (click)="onCancel()" class="btn2 btn">Cancel</button>
+        </div>
+    </form>
+  </div>
+</section>

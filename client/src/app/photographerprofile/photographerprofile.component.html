@@ -1,0 +1,43 @@
+<div class="col-md-8 col-lg-8 col-xs-8 col-sm-8 heading"><h3>Profile</h3></div>
+<div class="col-md-8 col-lg-8 col-xs-8 col-sm-8 main">
+    <!-- <div class="data" *ngFor="let p of profile">
+        <span>Name</span>&nbsp;&nbsp; :&nbsp; {{p.name}}<br/>
+        <span>Email Id</span>&nbsp;&nbsp; :&nbsp; {{p.email}}<br/>
+        <span>Contact No</span>&nbsp;&nbsp; : +91{{p.mobile}}<br/>
+        <span>Address</span>&nbsp;&nbsp; : {{p.address}}, {{p.city}}, {{p.state}}, {{p.country}}, {{p.pincode}}<br/>
+        <span>Experience</span>&nbsp;&nbsp; : {{p.experience}}
+        <br/>
+        <div class="linkk" (click)="updateRoute()"><a>Update Profile</a></div>
+    </div> -->
+    <table class="tablData table table-hover table-striped table-responsive-m">
+    <tbody  *ngFor="let p of profile">
+      <tr>
+        <td>Name</td>
+        <td>:</td>
+        <td>{{p.name}}</td>
+      </tr>
+      <tr>
+        <td>Email Id</td>
+        <td>:</td>
+        <td>{{p.email}}</td>
+      </tr>
+      <tr>
+        <td>Contact No</td>
+        <td>:</td>
+        <td>+91{{p.mobile}}</td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td>:</td>
+        <td>{{p.address}}, {{p.city}}, {{p.state}}, {{p.country}}, {{p.pincode}}</td>
+      </tr>
+      <tr>
+        <td>Experience</td>
+        <td>:</td>
+        <td>{{p.experience}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <a (click)="updateRoute()" class="buttonn btn btn-primary">Update Profile</a>
+</div>

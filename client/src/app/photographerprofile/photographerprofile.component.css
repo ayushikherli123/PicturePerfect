@@ -1,0 +1,45 @@
+.main
+{
+    overflow-y: scroll;
+    height: 400px;
+    color: darkslategray;
+    font-size: 13px;
+    margin-left: 17%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.tablData
+{
+    margin-top: 50px;
+    color: darkslategray;
+    font-size: 15px;
+}
+.heading
+{
+    height: auto;
+    background-color: #374a55;
+    color: white;
+    text-align: center;
+    margin-left: 17%;
+    margin-top: 30px;
+    text-shadow: 10px 0px 20px grey;
+}
+.buttonn
+{
+    font-size: 14px;
+    margin-left: 2%;
+    
+}
+.buttonn:hover
+{
+    transform: scale(1.1);
+}
+.data
+{
+    margin: 50px;
+    color: darkslategrey;
+    font-size: 15px;
+}
+span
+{
+    font-weight: bold;
+}

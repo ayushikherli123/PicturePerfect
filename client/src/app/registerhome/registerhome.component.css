@@ -1,0 +1,74 @@
+.main
+{
+    height: 600px;
+    background-color: #374a55;
+}
+.regform
+{
+    height: 380px;
+    margin-top: 120px;
+    margin-bottom: 50px;
+    color: whitesmoke;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+@media screen and (max-width:450px)
+{
+    .regLink
+    {
+        float: left;
+        margin-left: 0;
+    }
+    .regLink2
+    {
+        float: left;
+        margin-left: 0;
+    }
+}
+.regLink
+{
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 30px;
+    width: 30%;
+    height: 40px;
+    font-size: 100%;
+    line-height: 2.5em;
+    margin-left: 36%;
+    background-color:lightseagreen;
+    color: #034c54;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.regLink2
+{
+    width: 50%;
+    height: 40px;
+    text-align: center;
+    font-size: 100%;
+    line-height: 2.5em;
+    margin-left: 25%;
+    background-color:lightseagreen;
+    color: #034c54;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.regLink:hover
+{
+    background-color: #1fe26a;
+    color: #046d37;
+    font-weight: bold;
+    transform: scale(1.2);
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.regLink2:hover
+{
+    background-color: #1fe26a;
+    color: #046d37;
+    font-weight: bold;
+    transform: scale(1.2);
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

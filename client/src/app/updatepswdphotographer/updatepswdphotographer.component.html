@@ -1,0 +1,23 @@
+<section class="main">
+  <div class="regform col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+    <br/>
+    <h1>Update Password</h1>
+    <form #myForm24="ngForm" (submit)="submitMyForm(myForm24)">
+        <div class="form-group">
+          <div class="error" *ngIf="Cpass.touched && Cpass.invalid && Cpass.errors.required">Field is mandatory</div>
+            <div class="error" *ngIf="Cpass.touched && Cpass.invalid && Cpass.errors.minlength">Minimum 6 Characters</div>
+            <input type="password" required minlength="6" #Cpass="ngModel" ngModel name="password" class="form-control" placeholder="Password*">
+        </div>
+        <div class="form-group">
+          <div class="error" *ngIf="Ccpass.touched && Ccpass.invalid && Ccpass.errors.required">Field is mandatory</div>
+            <div class="error" *ngIf="Ccpass.touched && Ccpass.invalid && Ccpass.errors.minlength">Minimum 6 Characters</div>
+            <div class="error">{{errText}}</div>
+            <input required minlength="6" #Ccpass="ngModel" type="password" ngModel name="confirm_password" class="form-control" placeholder="Confirm Password*">
+        </div>
+        <div class="btn-group btngrp row marg">
+            <button [disabled]="myForm24.invalid" class="btn1 btn">Update</button>
+            <button (click)="onCancel()" class="btn2 btn">Cancel</button>
+        </div>
+    </form>
+  </div>
+</section>
