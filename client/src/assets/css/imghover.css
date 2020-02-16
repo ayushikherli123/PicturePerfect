@@ -1,0 +1,90 @@
+.container
+{
+  border: 1px solid black;
+}
+.slide1
+ {
+  position: relative;
+  width: 250px;
+  height: 400px;
+  display: inline-block;
+}
+
+.image {
+  display: block;
+  width: 250px;
+  height: 400px;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color:rgba(200, 30, 30, 0.75);
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .4s ease;
+}
+
+.slide1:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+.slide2
+{
+  position: relative;
+  width: 250px;
+  height: 400px;
+  display: inline-block;
+}
+
+.image1
+ {
+  display: block;
+  width: 250px;
+  height: 400px;
+}
+
+.overlay1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(30, 200, 30, 0.65);
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.slide2:hover .overlay1 {
+  width: 100%;
+}
+
+.text1 {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
