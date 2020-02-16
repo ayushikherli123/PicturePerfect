@@ -1,0 +1,66 @@
+<!--Menu Button-->
+<header>
+<div class="menu">
+    <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <!-- <a href="#" routerLink="home"><i class="glyphicon glyphicon-home"></i> Home</a> -->
+    <a class="mitm mitm1" href="#home"><i class="glyphicon glyphicon-home"></i>&nbsp; Home</a>
+    <!-- <a href="#" routerLink="knowUs"><i class="glyphicon glyphicon-asterisk"></i> Know_Us</a> -->
+    <a class="mitm mitm2" href="#knowUs"><i class="glyphicon glyphicon-asterisk"></i>&nbsp; Know Us</a> 
+    <a class="mitm mitm3" href="#" routerLink="gallery"><i class="glyphicon glyphicon-picture"></i>&nbsp; Featured Gallery</a>
+    <a class="mitm mitm4" href="#" routerLink="portfolio"><i class="glyphicon glyphicon-camera"></i>&nbsp; Portfolio</a>
+    <a class="mitm mitm5" href="#" routerLink="booking"><i class="glyphicon glyphicon-calendar"></i>&nbsp; Book Online</a>
+    <!-- <a href="#" routerLink="contact"><i class="glyphicon glyphicon-earphone"></i> Contact_Us</a> -->
+    <a class="mitm mitm6" href="#" *ngIf="isUserNotLoggedIn()" routerLink="register_home"><i class="glyphicon glyphicon-user"></i>&nbsp; Register</a> 
+    <a class="mitm mitm6" href="#" *ngIf="isUserLoggedIn()" routerLink="user_bookings"><i class="glyphicon glyphicon-list-alt"></i>&nbsp; Bookings</a>
+    <a class="mitm mitm8" href="#" *ngIf="isUserLoggedIn()" routerLink="feedback"><i class="glyphicon glyphicon-pencil"></i>&nbsp; Feedback</a>
+    <a class="mitm mitm6" href="#" *ngIf="isUserLoggedIn()" routerLink="profile"><i class="glyphicon glyphicon-user"></i>&nbsp; Profile</a>
+    <a class="mitm mitm6" href="#cont"><i class="glyphicon glyphicon-earphone"></i>&nbsp; Contact Us</a>
+    <a class="mitm mitm7" href="#" *ngIf="isUserNotLoggedIn()" routerLink="login"><i class="glyphicon glyphicon-log-in"></i>&nbsp;User Login</a>
+    <a class="mitm mitm9" href="#" (click)="logout()" *ngIf="isUserLoggedIn()"><i class="glyphicon glyphicon-log-out"></i>&nbsp; Logout</a>
+    <a class="mitm mitm5" href="#" *ngIf="isAdminNotLoggedIn()" routerLink="admin"><i class="glyphicon glyphicon-log-in"></i>&nbsp; Admin Login</a>
+    <a class="mitm mitm5" href="#" *ngIf="isPhotographerNotLoggedIn()" routerLink="photographer_login"><i class="glyphicon glyphicon-log-in"></i>&nbsp; Photographer Login</a>
+    </div>
+    <span style="font-size:30px;cursor:pointer" (click)="openNav()" class="glyphicon glyphicon-menu-hamburger menuicon" id="menubtn"></span>
+</div>
+<div class="menuMob">
+     <nav style="background-color: #374a55;" class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+            </button>
+            <a style="color:whitesmoke;" class="navbar-brand" href="#">Picture Perfect</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="#home"><i class="glyphicon glyphicon-home"></i>&nbsp; Home</a></li>
+                <li><a href="#knowUs"><i class="glyphicon glyphicon-asterisk"></i>&nbsp; Know Us</a></li>
+                <li><a href="#" routerLink="gallery"><i class="glyphicon glyphicon-picture"></i>&nbsp; Featured Gallery</a></li>
+                <li><a href="#" routerLink="portfolio"><i class="glyphicon glyphicon-camera"></i>&nbsp; Portfolio</a></li>
+                <li><a href="#" routerLink="booking"><i class="glyphicon glyphicon-calendar"></i>&nbsp; Book Online</a></li>
+                <li><a href="#" *ngIf="isUserNotLoggedIn()" routerLink="register_home"><i class="glyphicon glyphicon-user"></i>&nbsp; Register</a></li>
+                <li><a href="#" *ngIf="isUserLoggedIn()" routerLink="user_bookings"><i class="glyphicon glyphicon-list-alt"></i>&nbsp; Bookings</a></li>
+                <li><a href="#" *ngIf="isUserLoggedIn()" routerLink="feedback"><i class="glyphicon glyphicon-pencil"></i>&nbsp; Feedback</a></li>
+                <li><a href="#" *ngIf="isUserLoggedIn()" routerLink="profile"><i class="glyphicon glyphicon-user"></i>&nbsp; Profile</a></li>
+                <li><a href="#cont"><i class="glyphicon glyphicon-earphone"></i>&nbsp; Contact Us</a></li>
+                <li><a href="#" *ngIf="isUserNotLoggedIn()" routerLink="login"><i class="glyphicon glyphicon-log-in"></i>&nbsp;User Login</a></li>
+                <li><a href="#" (click)="logout()" *ngIf="isUserLoggedIn()"><i class="glyphicon glyphicon-log-out"></i>&nbsp; Logout</a></li>
+                <li><a href="#" *ngIf="isAdminNotLoggedIn()" routerLink="admin"><i class="glyphicon glyphicon-log-in"></i>&nbsp; Admin Login</a></li>
+                <li><a href="#" *ngIf="isPhotographerNotLoggedIn()" routerLink="photographer_login"><i class="glyphicon glyphicon-log-in"></i>&nbsp; Photographer Login</a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+</header>
+<section>
+<div>
+    <router-outlet></router-outlet>
+</div>
+</section>
+<div class="row copy"> 
+    <p>@2017 by Ayushi Jain. All rights are reserved</p>
+</div>

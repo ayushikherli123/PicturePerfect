@@ -1,0 +1,95 @@
+body {
+    font-family: "Lato", sans-serif;
+    overflow-x: hidden;
+}
+@media screen and (max-width:768px) 
+{
+    .menu
+    {
+        display: none;
+    } 
+    .menuMob
+    {
+        display: inline-block !important;
+    }       
+}
+.menuMob
+{
+    height: 60px;
+    width: 100%;
+    background-color: brown;
+    display: none;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:transparent;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.menu
+{
+    position: fixed;
+    z-index: 999;
+}
+.menuicon
+{
+    color: white;
+}
+.menuicon:hover
+{
+    color: red;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    background-color: rgba(100, 100, 100, 0.3);
+}
+.sidenav .closebtn:hover
+{
+    color: red;
+    transform: scale(1.2);
+}
+.sidenav .mitm:hover {
+    color:red;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    background-color: transparent;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.copy
+{
+    width: auto;
+    height: 50px;
+    background-color: #333232;
+    text-align: center;
+    color: gray;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.copy p
+{
+    line-height: 3em;
+    font-size: 16px;
+}
